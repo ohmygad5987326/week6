@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link href="assets/style.css" type="text/css" rel="stylesheet" />
+		<link href="assets/css/other.css" type="text/css" rel="stylesheet" />
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>
+		 <script src="assets/js/red_button.js"></script>
+	</head>
+	<body>
+	<!--WRITE-->
+		<h1>Single or Relationship</h1>
+		<form method="POST" action="/person" >
+			Yoursname: <br /><input type="textarea" id="Yoursname" name="Yoursname" /><br />
+			Birthdaydate: <br /><input type="textarea" id="Birthdaydate" name="Birthdaydate" /><br />
+      Phonenumber: <br /><input type="textarea" id="Phonenumber" name="Phonenumber" /><br />
+      Idnumber: <br /><input type="textarea" id="Idnumber" name="Idnumber" /><br />
+
+			<input type="submit" value="→" />
+		</form>
+		<!--SHOW-->
+		<h1>Analysis in the future</h1>
+		<% if (userinfos.length) { %>
+				  <ul>
+		  		  <% userinfos.forEach(function(userinfo){ %>
+				      <li><%= userinfos['Yoursname'] %>
+									<%= userinfos['Birthdaydate'] %>
+									<%= userinfos['Phonenumber'] %>
+									<%= userinfos['Idnumber'] %>
+							</li>
+				    <% }) %>
+			  	</ul>
+				<% } %>
+	</body>
+</html>
